@@ -11,7 +11,7 @@ def main(one, five, want):
             temp += 1
             one -= 1
             nub += 1
-        elif temp < want and temp + one < want:
+        elif temp < want:
             nub = -1
             break
     return nub

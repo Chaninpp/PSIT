@@ -1,4 +1,5 @@
 ''' CoPrimeV1 '''
+########################################################
 def main():
     ''' for find Relatively prime
     Ex. input  7    14
@@ -6,15 +7,16 @@ def main():
         output YES  NO
                1    7
     '''
-    num = func(int(input()), int(input()), [], [])
-
-    if num == 1:
-        print("YES")
-    else:
-        print("NO")
-
+    num = func_2(int(input()), int(input()))
+    print("YES" if num == 1 else "NO")
     print(num)
 
+def func_2(num_1, num_2):
+    ''' for GCD '''
+    while num_2:
+        num_1, num_2 = num_2, num_1 % num_2
+    return num_1
+########################################################
 def func(num_1, num_2, check_1, check_2):
     ''' for
     Ex. input  12       while b:

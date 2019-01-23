@@ -1,8 +1,10 @@
-"""OneTwo"""
+''' OneTwo '''
 def main(num):
-    """Sn"""
+    ''' for '''
     lis = ['1', '2']
-    for i in range(2, num):
-        lis.append(lis[i-1]+lis[i-2])
-    print(lis[num-1])
-main(int(input()))
+    for _ in range(2, num):
+        new = lis[1]+lis[0]
+        lis[0] = lis[1]
+        lis[1] = new
+    return lis[1] if num != 1 else lis[0]
+print(main(int(input())))

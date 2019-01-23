@@ -1,6 +1,6 @@
-"""MacaronBoxSML"""
+''' MacaronBoxSML '''
 def main(mac, small, med, large):
-    """Print"""
+    ''' for '''
     if mac >= 24:
         large += mac//24
         mac = mac%24

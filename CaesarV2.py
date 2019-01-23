@@ -516,7 +516,7 @@ def main2(cha):
     'would', 'wound', 'wrap', 'write', 'writer', 'writing', \
     'wrong', 'yard', 'yeah', 'year', 'yell', 'yellow', \
     'yes', 'yesterday', 'yet', 'yield', 'you', 'young', \
-    'your', 'yours', 'yourself', 'youth', 'zone', '0']
+    'your', 'yours', 'yourself', 'youth', 'zone']
 
     for _ in range(1, 55):
         cha_t = cha
@@ -525,7 +525,7 @@ def main2(cha):
         for j in cha:
             if j.lower() in lis_word:
                 count += 1
-            if count > 4 or count == len(cha):
+            if count > 4 or count >= len(cha):
                 result = cha_t
                 return result
         cha = main(cha_t)

@@ -7,19 +7,19 @@ def main(dis, fill):
     end = start + fill
     nub = 0
     while True:
-        if end >= dis:
+        if end >= dis: # จบ
             print(nub)
             break
         else:
-            for i in amount:
+            for i in amount: # หา ปตท.
                 if start < i <= end:
                     temp.append(i)
             if temp != []:
                 nub += 1
-                start = temp[-1]
+                start = temp[-1] # ปตท. ไกลสุด
             else:
-                print("depleted")
+                print("depleted") # ไม่เจอ ปตท.
                 break
-            end = start + fill
-            temp = []
+            end = start + fill # ระยะทางต้องเติม
+            temp = [] 
 main(float(input()), float(input()))

@@ -1,18 +1,15 @@
 ''' Key_Midterm2014 '''
-def main():
+def main(num):
     ''' print '''
-    num = input()
-    num1 = 0
     # 1
-    for i in range(13):
-        num1 += int(num[i])
+    num_sum = sum([int(i) for i in num])
     # 2
     num2 = int(num[10:])*10
     # calculate
-    result = num1 + num2
+    result = num_sum + num2
     result += 1000*(result < 1000)
     # print
     result = str(result)
-    print(result[-4:])
+    return result[-4:]
 
-main()
+print(main(input()))
