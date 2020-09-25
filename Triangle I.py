@@ -11,8 +11,10 @@ def main():
 
 def calcu(numa, numb, numc):
     ''' for calculate '''
+    # print(numa, numb, numc)
     result = numa**2 + numb**2
-    if result == numc**2 or result - numc**2 <= 0.01:
+    if result == numc**2 and numa > 0 and numb > 0:
+        # print(result - numc**2)
         return 'Yes'
     return 'No'
 

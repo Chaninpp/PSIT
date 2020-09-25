@@ -1,10 +1,10 @@
 ''' Donut '''
 def main():
     ''' find buy donut '''
-    price = int(input())
-    buy = int(input())
-    free = int(input())
-    want = int(input())
+    price = float(input())
+    buy = float(input())
+    free = float(input())
+    want = float(input())
     donuts = 0
     price_buy = 0
 
@@ -21,6 +21,7 @@ def main():
     donuts += (buy_free * want_free)
     price_buy += (want_free * buy * price)
 
-    print(price_buy, donuts)
+    print("%.2f Baht\n%d"%(price_buy, donuts))
 
 main()
+
